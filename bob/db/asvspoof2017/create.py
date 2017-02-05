@@ -40,6 +40,7 @@ def add_7_columns(session, samplesdir, filename, protocol, group, splitline, gen
 
     if protocol == 'competition':
         samplename = splitline[0]
+        samplename = samplename[:-4]  # remove extension
         purpose = splitline[1]  # attack or not
         attack_type = 'undefined'
         if purpose == 'spoof':
