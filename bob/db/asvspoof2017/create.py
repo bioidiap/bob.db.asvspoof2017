@@ -36,6 +36,27 @@ def add_file(session, protocol, path, purpose, attack_type, group, phrase_id, en
     # link file and the protocol
     session.add(ProtocolFiles(db_protocol, db_file))
 
+def add_2_columns(session, samplesdir, filename, protocol, group, splitline, gender):
+    if protocol == 'competition':
+        # in this case, there are only two columns: name of the file and phrase that was read
+        samplename = splitline[0]
+        samplename = samplename[:-4]  # remove extension
+        phrase_id = splitline[1]
+
+        purpose = 'spoof'  # assume always attacks
+        attack_type = 'spoof'
+        client = 'E0001'  # since info is hidden in this set, assume the same client
+        samplesfolder = group
+        environment_id = 'undefined'
+        playback_device = 'undefined'
+        recording_device = 'undefined'
+    else:
+        raise ValueError("Protocol file `%s' is not supported." % filename)
+
+    sample_path = os.path.join(samplesdir, samplesfolder, samplename)
+    add_file(session, protocol, sample_path, purpose, attack_type, group, phrase_id, environment_id,
+             playback_device, recording_device, client_id=client, gender=gender)
+
 def add_7_columns(session, samplesdir, filename, protocol, group, splitline, gender):
 
     if protocol == 'competition':
@@ -73,7 +94,12 @@ def add_protocol_samples(session, protodir, samplesdir, filename, protocol, grou
     for line in lines:
         splitline = (line.strip()).split(' ')
 
-        add_7_columns(session, samplesdir, filename, protocol, group, splitline, gender)
+        if len(splitline) == 2:  # eval set of the competition
+            add_2_columns(session, samplesdir, filename, protocol, group, splitline, gender)
+        elif len(splitline) == 7:  # train and dev sets of the competition
+            add_7_columns(session, samplesdir, filename, protocol, group, splitline, gender)
+        else:
+            raise ValueError("Protocol file should contain either 7 items per line or 2." % filename)
 
 def init_database(session, protodir, samplesdir, protocol_file_list):
     """Defines all available protocols"""
@@ -163,10 +189,11 @@ def add_command(subparsers):
                         help="Do SQL operations in a verbose way")
 
     parser.add_argument('-D', '--samplesdir', action='store',
-                        default='wav',
+                        default='',
                         metavar='DIR',
                         help="Change the relative path to the directory containing the audio samples definitions for asvspoof2017 database (defaults to %(default)s)")
 
+    # run create database with ABSOLUTE path to --protodir
     parser.add_argument('-P', '--protodir', action='store',
                         default='/Users/pavelkor/Documents/pav/idiap/src/bob.db.asvspoof2017/bob/db/asvspoof2017/protocols/',
                         metavar='DIR',
