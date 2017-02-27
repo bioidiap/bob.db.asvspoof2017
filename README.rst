@@ -15,9 +15,9 @@
    :target: https://pypi.python.org/pypi/bob.db.asvspoof2017
 
 
-=======================================
-ASVspoof2017 Database Interface for Bob
-=======================================
+=========================================
+ ASVspoof2017 Database Interface for Bob
+=========================================
 
 This package is part of the signal-processing and machine learning toolbox
 Bob_. It contains a Bob-based access API for the ASVspoof2017_ Database. The
