@@ -2,9 +2,9 @@
 .. Fri 3 Feb 11:51:35 CEST 2016
 
 .. image:: http://img.shields.io/badge/docs-stable-yellow.png
-   :target: http://pythonhosted.org/bob.db.asvspoof2017/index.html
+   :target: https://www.idiap.ch/software/bob/docs/bob/bob.db.asvspoof2017/stable/index.html
 .. image:: http://img.shields.io/badge/docs-latest-orange.png
-   :target: https://www.idiap.ch/software/bob/docs/latest/bob/bob.db.asvspoof2017/master/index.html
+   :target: https://www.idiap.ch/software/bob/docs/bob/bob.db.asvspoof2017/master/index.html
 .. image:: https://gitlab.idiap.ch/bob/bob.db.asvspoof2017/badges/master/build.svg
    :target: https://gitlab.idiap.ch/bob/bob.db.asvspoof2017/commits/master
 .. image:: https://gitlab.idiap.ch/bob/bob.db.asvspoof2017/badges/master/coverage.svg
@@ -12,8 +12,6 @@
 .. image:: https://img.shields.io/badge/gitlab-project-0000c0.svg
    :target: https://gitlab.idiap.ch/bob/bob.db.asvspoof2017
 .. image:: http://img.shields.io/pypi/v/bob.db.asvspoof2017.png
-   :target: https://pypi.python.org/pypi/bob.db.asvspoof2017
-.. image:: http://img.shields.io/pypi/dm/bob.db.asvspoof2017.png
    :target: https://pypi.python.org/pypi/bob.db.asvspoof2017
 
 
@@ -32,7 +30,7 @@ of different replay attacks using different devices recorded in different enviro
 Installation
 ------------
 
-Complete Bob's `installation`_ instructions. Then, to install this pacakge,
+Complete Bob's `installation`_ instructions. Then, to install this package,
 run::
 
   $ conda install bob.db.asvspoof2017
