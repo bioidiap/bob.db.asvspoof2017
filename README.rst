@@ -1,14 +1,14 @@
 .. vim: set fileencoding=utf-8 :
 .. Fri 3 Feb 11:51:35 CEST 2016
 
-.. image:: http://img.shields.io/badge/docs-v1.0.3-yellow.png
-   :target: https://www.idiap.ch/software/bob/docs/bob/bob.db.asvspoof2017/v1.0.3/index.html
+.. image:: http://img.shields.io/badge/docs-stable-yellow.png
+   :target: https://www.idiap.ch/software/bob/docs/bob/bob.db.asvspoof2017/stable/index.html
 .. image:: http://img.shields.io/badge/docs-latest-orange.png
    :target: https://www.idiap.ch/software/bob/docs/bob/bob.db.asvspoof2017/master/index.html
-.. image:: https://gitlab.idiap.ch/bob/bob.db.asvspoof2017/badges/v1.0.3/build.svg
-   :target: https://gitlab.idiap.ch/bob/bob.db.asvspoof2017/commits/v1.0.3
-.. image:: https://gitlab.idiap.ch/bob/bob.db.asvspoof2017/badges/v1.0.3/coverage.svg
-   :target: https://gitlab.idiap.ch/bob/bob.db.asvspoof2017/commits/v1.0.3
+.. image:: https://gitlab.idiap.ch/bob/bob.db.asvspoof2017/badges/master/build.svg
+   :target: https://gitlab.idiap.ch/bob/bob.db.asvspoof2017/commits/master
+.. image:: https://gitlab.idiap.ch/bob/bob.db.asvspoof2017/badges/master/coverage.svg
+   :target: https://gitlab.idiap.ch/bob/bob.db.asvspoof2017/commits/master
 .. image:: https://img.shields.io/badge/gitlab-project-0000c0.svg
    :target: https://gitlab.idiap.ch/bob/bob.db.asvspoof2017
 .. image:: http://img.shields.io/pypi/v/bob.db.asvspoof2017.png
