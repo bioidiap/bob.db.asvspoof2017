@@ -37,9 +37,6 @@ setup(
     install_requires=install_requires,
 
     entry_points={
-        'console_scripts': [
-            'debug_asvspoof2017 = bob.db.asvspoof2017.debug_asvspoof2017:main',
-        ],
         # bob database declaration
         'bob.db': [
             'asvspoof2017 = bob.db.asvspoof2017.driver:Interface',

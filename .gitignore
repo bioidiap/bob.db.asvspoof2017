@@ -21,4 +21,4 @@ build
 src/
 *.sql3
 temp
-results
+record.txt
