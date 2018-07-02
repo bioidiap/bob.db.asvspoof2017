@@ -47,4 +47,4 @@ development `mailing list`_.
 .. _bob: https://www.idiap.ch/software/bob
 .. _installation: https://gitlab.idiap.ch/bob/bob/wikis/Installation
 .. _mailing list: https://groups.google.com/forum/?fromgroups#!forum/bob-devel
-.. _asvspoof2017: http://www.asvspoof.org/
+.. _asvspoof2017: http://dx.doi.org/10.7488/ds/2313
